@@ -4,7 +4,7 @@ from pyrogram import Client, filters
 import asyncio
 import random
 
-@Client.on_message(filters.command("stik", ['!','.','/']) & filters.me)
+@Client.on_message(filters.command("diz", ['!','.','/']) & filters.me)
 async def stik(client, message):
     # < Başlangıç
     uyku = await message.edit("__asyncio.sleep(0.3)__")
@@ -25,10 +25,10 @@ async def stik(client, message):
     #------------------------------------------------------------- Başlangıç >
 
     if cevaplanan_mesaj is None:
-        await ilk_mesaj.edit("__stikır yapılacak mesajı yanıtlamalısın..__")
+        await ilk_mesaj.edit("__dızlamak için mesajı yanıtlamalısın..__")
         return
 
-    await ilk_mesaj.edit("`Stikır yapıyorum`")
+    await ilk_mesaj.edit("`Dızzlıyorum`")
     await cevaplanan_mesaj.forward("@QuotLyBot")
     
     stik_mi = False
@@ -53,7 +53,7 @@ async def stik(client, message):
                 if hata_limit == 3:
                     break
     
-    await ilk_mesaj.edit("`Tamamlandı !`", parse_mode="md")
+    await ilk_mesaj.edit("`Dızlandıı !`", parse_mode="md")
     msg_id = msg[0]["message_id"]
     await client.forward_messages(message.chat.id, "@QuotLyBot", msg_id)
     await client.read_history("@QuotLyBot")
