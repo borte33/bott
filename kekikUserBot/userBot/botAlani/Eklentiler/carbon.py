@@ -81,7 +81,7 @@ async def carbon_api(client, message):
         await client.send_photo(
             message.chat.id,
             carbon_gorsel,
-            caption             =   "__KekikAkademi Robot tarafından dönüştürülmüştür__",
+            caption             =   " ",
             reply_to_message_id =   yanitlanacak_mesaj,
         )
         await ilk_mesaj.delete()
